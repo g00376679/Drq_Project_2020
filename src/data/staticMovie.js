@@ -2,6 +2,7 @@ import movie1 from "../assest/image/movie1.png";
 import movie2 from "../assest/image/movie2.png";
 import movie3 from "../assest/image/movie3.png";
 import movie4 from "../assest/image/movie4.png";
+import movie5 from "../assest/image/movie5.png";
 
 const staticMovieList = [
   {
@@ -25,8 +26,8 @@ const staticMovieList = [
     Year: 2018
   },
   {
-    Title: "Black Panther",
-    Poster: movie1,
+    Title: "Black Panther 5",
+    Poster: movie5,
     Year: 2018
   },
   {
