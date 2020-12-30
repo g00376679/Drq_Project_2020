@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-
+//this is main componenets we can see in browser 
 class App extends Component {
   render() {
     return (

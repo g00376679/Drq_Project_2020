@@ -3,14 +3,14 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 import logo from '../../assest/image/logo.svg';
 import constants from "../../constants/constants";
-
+import "./style.css";//importing colour
 const { IMAGE_NOT_FOUND } = constants;
 
 class Header extends Component{
 
     render(){
         return (
-            <Navbar bg="primary" variant="dark" fixed="top">
+            <Navbar variant="dark" fixed="top" className="customheader"> 
                 <Navbar.Brand href="/">
                     <img src={logo} alt={IMAGE_NOT_FOUND} height="30px" />
                 </Navbar.Brand>
