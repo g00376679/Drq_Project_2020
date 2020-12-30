@@ -1,0 +1,7 @@
+.movieItemContainer {
+  width: 30%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-flex;
+}
