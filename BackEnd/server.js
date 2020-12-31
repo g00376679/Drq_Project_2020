@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const port = 4000
-const cors = require('cors');
+const cors = require('cors'); // for cross origin
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
@@ -46,7 +46,7 @@ const movieModel = mongoose.model('movies', movieSchema);
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
-
+//get api movies return
 app.get('/api/movies', (req, res) => {
     
     movieModel.find((err,data)=>{
@@ -56,7 +56,7 @@ app.get('/api/movies', (req, res) => {
     //         "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg"
     
 })
-
+//partucular movie data return
 app.get('/api/movies/:id',(req, res)=>{
 
     console.log(req.params.id);
@@ -65,17 +65,17 @@ app.get('/api/movies/:id',(req, res)=>{
         res.json(data);
     })
 })
-//delete method 
+//api delete method 
 app.delete('/api/movies/:id', (req, res)=>{
     console.log(req.params.id);
-
+//this is mongo db delete method
     movieModel.findByIdAndDelete({_id:req.params.id},
          (err, data)=>{
         res.send(data);
     })
 })
 
-
+//crete api method
 app.post('/api/movies', (req, res) => {
     movieModel.create({
         Title:req.body.Title,
@@ -87,7 +87,7 @@ app.post('/api/movies', (req, res) => {
 
     res.send('Data Recieved!');
 })
-
+// create update method 
 app.put('/api/updateMovie', (req, res) => {
     movieModel.update(
         {
