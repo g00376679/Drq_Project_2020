@@ -77,8 +77,6 @@ app.delete('/api/movies/:id', (req, res)=>{
 
 
 app.post('/api/movies', (req, res) => {
-    console.log(req.body);
-
     movieModel.create({
         Title:req.body.Title,
         Year:req.body.Year,
@@ -89,6 +87,26 @@ app.post('/api/movies', (req, res) => {
 
     res.send('Data Recieved!');
 })
+
+app.put('/api/updateMovie', (req, res) => {
+    movieModel.update(
+        {
+            _id: req.body._id
+        },
+        {
+            $set: {
+                Title:req.body.Title,
+                Year:req.body.Year,
+                Poster:req.body.Poster
+            }
+        }
+    )
+    .then()
+    .catch();
+
+    res.send('Data Recieved!');
+})
+
 //this method will return html front end file 
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname+'/../build/index.html'));
