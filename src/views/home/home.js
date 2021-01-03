@@ -33,7 +33,7 @@ class Home extends Component {
                 <h1>
                     { WELCOME_MESSAGE }
                 </h1>
-                <h2>Time is now: {time}</h2>
+                <h2>Time is : {time}</h2>
                 {
                     staticMovieList.length &&
                     <div>

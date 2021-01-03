@@ -5,7 +5,7 @@ import logo from '../../assest/image/logo.svg';
 import constants from "../../constants/constants";
 import "./style.css";//importing colour
 const { IMAGE_NOT_FOUND } = constants;
-
+// componenet is used for header... to navigate the application
 class Header extends Component{
 
     render(){

@@ -5,6 +5,8 @@ import movie4 from "../assest/image/movie4.png";
 import movie5 from "../assest/image/movie5.png";
 import movie6 from "../assest/image/movie6.jpeg";
 import movie7 from "../assest/image/movie7.jpg";
+import movie8 from "../assest/image/movie8.jpg";
+import movie9 from "../assest/image/movie9.jpg";
 const staticMovieList = [
   {
     Title: "Black Panther",
@@ -43,7 +45,18 @@ const staticMovieList = [
     Poster: movie6,
     Year: 2005
   }
-
+,
+{
+  Title: "Wrong Turn",
+  Poster: movie8,
+  Year: 2010
+}
+,
+{
+  Title: "Jab Tak Hai Jaan",
+  Poster: movie9,
+  Year: 2015
+}
   
 ];
 //using export word to access the movie data from other folders and files.
