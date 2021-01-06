@@ -52,8 +52,8 @@ class Read extends Component {
                             ReloadData={this.ReloadData}
                         /> :
                         <>
-                            <h1>This is the read component.</h1>
-                            <h2>No movie(s) available</h2>
+                            <h1></h1>
+                            <h2>No movie yet</h2>
                         </>
                 }            
             </div>

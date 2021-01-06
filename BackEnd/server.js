@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 
-//to avoid cors error 
+//To avoid cors error 
 app.use(cors());
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -68,14 +68,14 @@ app.get('/api/movies/:id',(req, res)=>{
 //api delete method 
 app.delete('/api/movies/:id', (req, res)=>{
     console.log(req.params.id);
-//this is mongo db delete method
+//This is mongo db delete method here
     movieModel.findByIdAndDelete({_id:req.params.id},
          (err, data)=>{
         res.send(data);
     })
 })
 
-//crete api method
+//create api method here
 app.post('/api/movies', (req, res) => {
     movieModel.create({
         Title:req.body.Title,
@@ -87,7 +87,7 @@ app.post('/api/movies', (req, res) => {
 
     res.send('Data Recieved!');
 })
-// create update method 
+// Update movie method 
 app.put('/api/updateMovie', (req, res) => {
     movieModel.update(
         {
@@ -107,7 +107,7 @@ app.put('/api/updateMovie', (req, res) => {
     res.send('Data Recieved!');
 })
 
-//this method will return html front end file 
+//This method will return html front end file 
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname+'/../build/index.html'));
 })

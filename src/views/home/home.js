@@ -17,7 +17,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        // 1000 ==> 1 sec
+        // time changing
         this.interval = setInterval(() => this.setState({ time: new Date().toLocaleTimeString() }), 1000);
     }
 
