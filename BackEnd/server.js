@@ -56,7 +56,7 @@ app.get('/api/movies', (req, res) => {
     //         "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg"
     
 })
-//partucular movie data return
+// partucular movie data return
 app.get('/api/movies/:id',(req, res)=>{
 
     console.log(req.params.id);
@@ -65,17 +65,17 @@ app.get('/api/movies/:id',(req, res)=>{
         res.json(data);
     })
 })
-//api delete method 
+// Api delete method 
 app.delete('/api/movies/:id', (req, res)=>{
     console.log(req.params.id);
-//This is mongo db delete method here
+// This is mongo db delete method here
     movieModel.findByIdAndDelete({_id:req.params.id},
          (err, data)=>{
         res.send(data);
     })
 })
 
-//create api method here
+// create api method here
 app.post('/api/movies', (req, res) => {
     movieModel.create({
         Title:req.body.Title,
@@ -107,7 +107,7 @@ app.put('/api/updateMovie', (req, res) => {
     res.send('Data Recieved!');
 })
 
-//This method will return html front end file 
+// This method will return html front end file 
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname+'/../build/index.html'));
 })

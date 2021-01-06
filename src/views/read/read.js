@@ -53,7 +53,7 @@ class Read extends Component {
                         /> :
                         <>
                             <h1></h1>
-                            <h2>No movie yet</h2>
+                            <h2>No movie Avaliable</h2>
                         </>
                 }            
             </div>
